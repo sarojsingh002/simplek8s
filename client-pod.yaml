@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
     - name: client
-      image: sks002/update2
+      image: nginx
       ports:
-        - containerPort: 3001
+        - containerPort: 80
