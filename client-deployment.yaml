@@ -14,7 +14,7 @@ spec:
         component: web
     spec:
       containers:
-        - image: sks002/update2
+        - image: nginx
           name: client
           ports:
-            - containerPort: 3001
+            - containerPort: 80
