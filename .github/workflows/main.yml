@@ -1,10 +1,16 @@
 name: hello-world
-on: push
-repository_dispatch:
-  types: [custom-event]
+on:
+  push:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [custom-event]
+
 jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: my-step
         run: echo "Hello World!"
