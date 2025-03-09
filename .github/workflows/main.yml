@@ -18,6 +18,11 @@ jobs:
       - name: Initialize submodule
         run: git submodule update --init --recursive
 
+      - name: Checkout submodule branch
+        run: |
+          cd Dockerfile-Bank
+          git checkout test-branch
+
       - name: List files in submodule
         run: ls Dockerfile-Bank
 
