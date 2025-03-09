@@ -12,5 +12,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Add submodule
+        run: git submodule add https://github.com/sarojsingh002/Dockerfile-Bank.git
+
+      - name: Initialize submodule
+        run: git submodule update --init --recursive
+
+      - name: List files in submodule
+        run: ls Dockerfile-Bank
+
       - name: my-step
         run: echo "Hello World!"
